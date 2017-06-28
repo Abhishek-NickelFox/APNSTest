@@ -14,6 +14,8 @@
 		46EC00FE1F0236FD0047FB8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46EC00FC1F0236FD0047FB8F /* LaunchScreen.storyboard */; };
 		46EC01091F0236FD0047FB8F /* APNSTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC01081F0236FD0047FB8F /* APNSTestTests.swift */; };
 		46EC01141F0236FD0047FB8F /* APNSTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC01131F0236FD0047FB8F /* APNSTestUITests.swift */; };
+		46FB0EC31F03952400258ED3 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB0EC21F03952400258ED3 /* NotificationService.swift */; };
+		46FB0EC71F03952400258ED3 /* APNSServiceExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 46FB0EC01F03952400258ED3 /* APNSServiceExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,28 @@
 			remoteGlobalIDString = 46EC00EF1F0236FC0047FB8F;
 			remoteInfo = APNSTest;
 		};
+		46FB0EC51F03952400258ED3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EC00E81F0236FC0047FB8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46FB0EBF1F03952400258ED3;
+			remoteInfo = APNSServiceExt;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		46FB0ECB1F03952400258ED3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				46FB0EC71F03952400258ED3 /* APNSServiceExt.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		46EC00F01F0236FC0047FB8F /* APNSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APNSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +71,9 @@
 		46EC01131F0236FD0047FB8F /* APNSTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNSTestUITests.swift; sourceTree = "<group>"; };
 		46EC01151F0236FD0047FB8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46EC01211F023D1E0047FB8F /* APNSTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = APNSTest.entitlements; sourceTree = "<group>"; };
+		46FB0EC01F03952400258ED3 /* APNSServiceExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = APNSServiceExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		46FB0EC21F03952400258ED3 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		46FB0EC41F03952400258ED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +98,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46FB0EBD1F03952400258ED3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +114,7 @@
 				46EC00F21F0236FC0047FB8F /* APNSTest */,
 				46EC01071F0236FD0047FB8F /* APNSTestTests */,
 				46EC01121F0236FD0047FB8F /* APNSTestUITests */,
+				46FB0EC11F03952400258ED3 /* APNSServiceExt */,
 				46EC00F11F0236FC0047FB8F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +125,7 @@
 				46EC00F01F0236FC0047FB8F /* APNSTest.app */,
 				46EC01041F0236FD0047FB8F /* APNSTestTests.xctest */,
 				46EC010F1F0236FD0047FB8F /* APNSTestUITests.xctest */,
+				46FB0EC01F03952400258ED3 /* APNSServiceExt.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +162,15 @@
 			path = APNSTestUITests;
 			sourceTree = "<group>";
 		};
+		46FB0EC11F03952400258ED3 /* APNSServiceExt */ = {
+			isa = PBXGroup;
+			children = (
+				46FB0EC21F03952400258ED3 /* NotificationService.swift */,
+				46FB0EC41F03952400258ED3 /* Info.plist */,
+			);
+			path = APNSServiceExt;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +181,12 @@
 				46EC00EC1F0236FC0047FB8F /* Sources */,
 				46EC00ED1F0236FC0047FB8F /* Frameworks */,
 				46EC00EE1F0236FC0047FB8F /* Resources */,
+				46FB0ECB1F03952400258ED3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				46FB0EC61F03952400258ED3 /* PBXTargetDependency */,
 			);
 			name = APNSTest;
 			productName = APNSTest;
@@ -183,6 +229,23 @@
 			productReference = 46EC010F1F0236FD0047FB8F /* APNSTestUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		46FB0EBF1F03952400258ED3 /* APNSServiceExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46FB0ECA1F03952400258ED3 /* Build configuration list for PBXNativeTarget "APNSServiceExt" */;
+			buildPhases = (
+				46FB0EBC1F03952400258ED3 /* Sources */,
+				46FB0EBD1F03952400258ED3 /* Frameworks */,
+				46FB0EBE1F03952400258ED3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = APNSServiceExt;
+			productName = APNSServiceExt;
+			productReference = 46FB0EC01F03952400258ED3 /* APNSServiceExt.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -216,6 +279,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 46EC00EF1F0236FC0047FB8F;
 					};
+					46FB0EBF1F03952400258ED3 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = NY45473NT8;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 46EC00EB1F0236FC0047FB8F /* Build configuration list for PBXProject "APNSTest" */;
@@ -234,6 +302,7 @@
 				46EC00EF1F0236FC0047FB8F /* APNSTest */,
 				46EC01031F0236FD0047FB8F /* APNSTestTests */,
 				46EC010E1F0236FD0047FB8F /* APNSTestUITests */,
+				46FB0EBF1F03952400258ED3 /* APNSServiceExt */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +326,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		46EC010D1F0236FD0047FB8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FB0EBE1F03952400258ED3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -291,6 +367,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46FB0EBC1F03952400258ED3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46FB0EC31F03952400258ED3 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -303,6 +387,11 @@
 			isa = PBXTargetDependency;
 			target = 46EC00EF1F0236FC0047FB8F /* APNSTest */;
 			targetProxy = 46EC01101F0236FD0047FB8F /* PBXContainerItemProxy */;
+		};
+		46FB0EC61F03952400258ED3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46FB0EBF1F03952400258ED3 /* APNSServiceExt */;
+			targetProxy = 46FB0EC51F03952400258ED3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -424,6 +513,7 @@
 		46EC01191F0236FD0047FB8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = APNSTest/APNSTest.entitlements;
 				DEVELOPMENT_TEAM = NY45473NT8;
@@ -438,6 +528,7 @@
 		46EC011A1F0236FD0047FB8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = APNSTest/APNSTest.entitlements;
 				DEVELOPMENT_TEAM = NY45473NT8;
@@ -503,6 +594,32 @@
 			};
 			name = Release;
 		};
+		46FB0EC81F03952400258ED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = NY45473NT8;
+				INFOPLIST_FILE = APNSServiceExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nickelfox.testpush.APNSServiceExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		46FB0EC91F03952400258ED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = NY45473NT8;
+				INFOPLIST_FILE = APNSServiceExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nickelfox.testpush.APNSServiceExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -522,6 +639,7 @@
 				46EC011A1F0236FD0047FB8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46EC011B1F0236FD0047FB8F /* Build configuration list for PBXNativeTarget "APNSTestTests" */ = {
 			isa = XCConfigurationList;
@@ -530,12 +648,22 @@
 				46EC011D1F0236FD0047FB8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46EC011E1F0236FD0047FB8F /* Build configuration list for PBXNativeTarget "APNSTestUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46EC011F1F0236FD0047FB8F /* Debug */,
 				46EC01201F0236FD0047FB8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46FB0ECA1F03952400258ED3 /* Build configuration list for PBXNativeTarget "APNSServiceExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46FB0EC81F03952400258ED3 /* Debug */,
+				46FB0EC91F03952400258ED3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

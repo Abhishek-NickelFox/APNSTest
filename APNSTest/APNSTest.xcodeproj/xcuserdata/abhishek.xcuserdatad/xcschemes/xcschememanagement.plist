@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>APNSServiceExt.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>APNSTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>46EC010E1F0236FD0047FB8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>46FB0EBF1F03952400258ED3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
